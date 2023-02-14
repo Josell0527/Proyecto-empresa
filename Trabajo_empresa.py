@@ -2,8 +2,9 @@ import flet as ft
 
 def main(page: ft.Page):
     page.bgcolor= "#dcdcdc"
-
-    container_1.alignment = alignment.center
+    page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
+    page.window_resizable = False
+    
     img = ft.Image(src=f"/Imagenes/logo2.png", width=100, height=100)
     
     usuario = ft.TextField(label="Usuario", width=300)
