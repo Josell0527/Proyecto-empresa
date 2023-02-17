@@ -36,6 +36,7 @@ def main(page: ft.Page):
                 page.dialog = dlg1
                 dlg1.open = True
                 page.update()
+                page.clean()
             else:
                 dlg = ft.AlertDialog(title=ft.Text("Usuario y contraseña incorrectos"),on_dismiss=lambda e: print("Dialog dismissed!"))
                 page.dialog = dlg
@@ -51,7 +52,7 @@ def main(page: ft.Page):
             dlg2 = ft.AlertDialog(title=ft.Text("Número de intentos alcalzado"),on_dismiss=lambda e: print("Dialog dismissed!"))
             page.dialog = dlg2
             dlg2.open = True
-            page.update()
+            page.window_close()
     
     page.vertical_alignment = ft.MainAxisAlignment.END
     
