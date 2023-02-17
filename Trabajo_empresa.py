@@ -1,6 +1,10 @@
 import flet as ft
 
 def main(page: ft.Page):
+    
+    page.vertical_alignment = ft.MainAxisAlignment.CENTER
+    page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
+    page.window_resizable = False
 
     
 
@@ -48,13 +52,8 @@ def main(page: ft.Page):
             page.dialog = dlg2
             dlg2.open = True
             page.update()
-            page.close()
-
-
-    #page.bgcolor=
-    page.vertical_alignment = ft.MainAxisAlignment.CENTER
-    page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
-    page.window_resizable = False
+    
+    page.vertical_alignment = ft.MainAxisAlignment.END
     
     img = ft.Image(src=f"/Imagenes/logo3.png", width=200, height=200)
     
@@ -63,9 +62,11 @@ def main(page: ft.Page):
     intentos = ft.TextField(value=3)
     
     botonguardar=ft.FilledButton(text="Iniciar sesión", on_click=comprobardatos)
+    
+    img2 = ft.Image(src=f"/Imagenes/fondo2.png", width=200, height=200)
 
     
-    page.add(img, usuario, contraseña, botonguardar)
+    page.add(img, usuario, contraseña, botonguardar, img2)
     
     
 ft.app(target=main, assets_dir="Imagenes")  
