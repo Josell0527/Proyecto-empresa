@@ -44,12 +44,8 @@ def main(page: ft.Page):
     usuario = ft.TextField(label="Usuario", width=300)
     contraseña = ft.TextField(label="Contraseña", width=300)
     
-<<<<<<< HEAD
-    botonguardar=ft.FilledButton(text="Iniciar sesión")
-=======
     botonguardar=ft.FilledButton(text="Iniciar sesión", on_click=comprobardatos)
 
->>>>>>> funcionalidad
     
     page.add(img, usuario, contraseña, botonguardar)
     
