@@ -62,7 +62,8 @@ def main(page: ft.Page):
     contraseña = ft.TextField(label="Contraseña", width=300, password=True, can_reveal_password=True)
     intentos = ft.TextField(value=3)
     
-    botonguardar=ft.FilledButton(text="Iniciar sesión", on_click=comprobardatos)
+    botonguardar= ft.FilledButton(text="Iniciar sesión", on_click=comprobardatos)
+    botonguardar.bgcolor= "#6e1010"
     
     img2 = ft.Image(src=f"/Imagenes/fondo2.png", width=200, height=200)
 
